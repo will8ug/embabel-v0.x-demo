@@ -1,0 +1,11 @@
+
+embabel-agent-api/src/main/resources/mcp/**
+
+target/
+
+.idea/
+.vscode/
+
+.claude
+
+**/*.log
