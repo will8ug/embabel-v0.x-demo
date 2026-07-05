@@ -27,8 +27,9 @@ else
 fi
 
 if [ "$OPENAI_KEY_MISSING" = true ] && [ "$ANTHROPIC_KEY_MISSING" = true ]; then
-    echo "ERROR: Both OPENAI_API_KEY and ANTHROPIC_API_KEY are missing."
-    echo "At least one API key is required to use language models."
-    echo "Please set at least one of these keys before running the application."
-    exit 1
+    echo "Neither OPENAI_API_KEY nor ANTHROPIC_API_KEY is set."
+    echo "Cloud models will not be available. The app will fall back to Ollama."
+    if ! curl -s --max-time 2 http://localhost:11434/api/tags >/dev/null; then
+        echo "Warning: Ollama not detected on localhost:11434. Make sure it is running."
+    fi
 fi
