@@ -9,10 +9,10 @@
         <version>3.5.13</version>
     </parent>
     <groupId>io.will.embabelpoc</groupId>
-    <artifactId>Embabel-poc</artifactId>
+    <artifactId>embabel-v0.x-demo</artifactId>
     <version>0.1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
-    <name>Embabel PoC</name>
+    <name>embabel-v0.x-demo</name>
     <description>Generated agent project</description>
 
     <properties>
